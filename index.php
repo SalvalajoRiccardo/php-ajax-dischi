@@ -24,6 +24,23 @@
                     <div v-if="loader == false">
                         <img src="https://i.pinimg.com/originals/2b/02/15/2b02159fee58d573c079ad5212d56b63.gif" alt="loader">
                     </div>
+
+                    <div v-else class="alb">
+                        <img :src="album.poster" :alt="album.title">
+                        <h4>{{album.author}} : {{album.title}}</h4>
+                        <span>Year: {{album.year}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- bonus -->
+        <div class="container text-center">
+            <div v-for="genre in gen" class="row">
+                <h2 class="spaz">{{genre}}</h2>
+                <div v-if="genre == album.genre" v-for="album in albums" class="col-4 g-3 ">
+                    <div v-if="loader == false">
+                        <img src="https://i.pinimg.com/originals/2b/02/15/2b02159fee58d573c079ad5212d56b63.gif" alt="loader">
+                    </div>
                     
                     <div v-else class="alb">
                         <img :src="album.poster" :alt="album.title">
