@@ -37,13 +37,6 @@ $albums = [
         'year' => 2005,
         'poster' => 'https://upload.wikimedia.org/wikipedia/en/0/02/Mezmerize-LP.jpg' 
     ],
-]
-
-
-
-
-
-
-
-
-?>
+];
+header('Content-Type: application/json');
+echo json_encode($albums);
